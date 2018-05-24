@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/gofortune/gofortune/lib"
+	"github.com/pcj/gofortune/lib"
 )
 
 // Represents a file/directory path with the possibilities established by the requester

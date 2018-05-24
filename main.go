@@ -4,7 +4,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/gofortune/gofortune/cmd"
+	"github.com/pcj/gofortune/cmd"
 )
 
 func main() {

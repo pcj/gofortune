@@ -13,12 +13,12 @@ import (
 
 	"fmt"
 
-	"github.com/gofortune/gofortune/lib"
+	"github.com/pcj/gofortune/lib"
 )
 
 type FortuneData struct {
-	Data       string
-	FileName   string
+	Data     string
+	FileName string
 }
 
 func init() {
@@ -55,7 +55,7 @@ func GetRandomFortune(rootNode FileSystemNodeDescriptor) <-chan FortuneData {
 
 		fortuneData, err := lib.ReadData(fortuneFile, int64(dataPos.OriginalOffset))
 
-		output <- FortuneData{FileName: filepath.Base(randomNode.Path),Data: fortuneData}
+		output <- FortuneData{FileName: filepath.Base(randomNode.Path), Data: fortuneData}
 		close(output)
 	}()
 
@@ -66,7 +66,7 @@ func GetLengthFilteredRandomFortune(rootNode FileSystemNodeDescriptor, shorterTh
 	output := make(chan FortuneData)
 	go func() {
 		for {
-			n := <- GetRandomFortune(rootNode)
+			n := <-GetRandomFortune(rootNode)
 			length := uint32(len(n.Data))
 			if length > longerThan && length < shorterThan {
 				output <- n

@@ -53,7 +53,7 @@ Before you submit your pull request consider the following guidelines:
 
 * Search GitHub for an open or closed Pull Request
   that relates to your submission. You don't want to duplicate effort.
-* Please sign our <a href="https://www.clahub.com/agreements/gofortune/gofortune">Contributor License Agreement</a> before sending pull
+* Please sign our <a href="https://www.clahub.com/agreements/pcj/gofortune">Contributor License Agreement</a> before sending pull
   requests. Code cannot be accepted without this.
 * Make your changes in a new git branch:
 

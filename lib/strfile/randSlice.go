@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/gofortune/gofortune/lib"
+	"github.com/pcj/gofortune/lib"
 )
 
 func init() {

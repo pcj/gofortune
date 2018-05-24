@@ -10,7 +10,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/gofortune/gofortune/lib"
+	"github.com/pcj/gofortune/lib"
 )
 
 func StrFile(ignoreCase bool, silent bool, order bool, randomize bool, rot13 bool, delimitingChar string, sourceFile string, dataFile string) (err error) {

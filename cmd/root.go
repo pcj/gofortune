@@ -4,17 +4,18 @@ import (
 	"fmt"
 	"os"
 
+	"math"
+	"path/filepath"
+	"strconv"
+	"strings"
+	"time"
+
 	"github.com/mitchellh/go-homedir"
+	"github.com/patrickdappollonio/localized"
+	"github.com/pcj/gofortune/lib"
+	"github.com/pcj/gofortune/lib/fortune"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"github.com/gofortune/gofortune/lib/fortune"
-	"time"
-	"path/filepath"
-	"github.com/gofortune/gofortune/lib"
-	"github.com/patrickdappollonio/localized"
-	"strings"
-	"strconv"
-	"math"
 )
 
 var cfgFile string
@@ -135,7 +136,7 @@ func fortunePrepareRequest(args []string) {
 
 // selectExisting selects the first existing path of the two paths passed
 func selectExisting(path1 string, path2 string) string {
-	if path2 == "" || ! lib.FileExists(path2) {
+	if path2 == "" || !lib.FileExists(path2) {
 		return path1
 	}
 	return path2
@@ -156,7 +157,7 @@ func fortuneRun(request FortuneRequest) (err error) {
 
 	var (
 		shorterThan uint32 = math.MaxUint32
-		longerThan uint32 = 0
+		longerThan  uint32 = 0
 	)
 
 	if request.ShortOnly {

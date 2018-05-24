@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/gofortune/gofortune/lib"
-	"github.com/gofortune/gofortune/lib/strfile"
+	"github.com/pcj/gofortune/lib"
+	"github.com/pcj/gofortune/lib/strfile"
 	"github.com/spf13/cobra"
 )
 

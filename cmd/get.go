@@ -4,10 +4,11 @@ import (
 	"github.com/spf13/cobra"
 
 	"fmt"
-	"path/filepath"
 	"os"
+	"path/filepath"
 	"strings"
-	"github.com/gofortune/gofortune/lib/repository"
+
+	"github.com/pcj/gofortune/lib/repository"
 )
 
 var getName string = "get"
@@ -26,7 +27,7 @@ var getCmd = &cobra.Command{
 	Short: getShortDescription,
 	Long:  getLongDescription,
 	Run: func(cmd *cobra.Command, args []string) {
- 		getPrepareRequest(args)
+		getPrepareRequest(args)
 		getRun(getRequest)
 	},
 }
